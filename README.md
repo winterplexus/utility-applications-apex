@@ -1,5 +1,5 @@
-force-utility
-=============
+Utility Applications for APEX
+=============================
 
 Utility applications based on Force.com technology and APEX programming language, VisualForce pages and standard HTML/CSS.
 
