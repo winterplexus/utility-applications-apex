@@ -127,14 +127,14 @@
       <br />
       <br />
       <apex:image id="logo" value="{!URLFOR($Resource.wiregrass_resources, 'wiregrass.png')}" height="60" width="200"/>
-      <p>&nbsp;&copy; Wiregrass Cloud Technology 2015-17.&nbsp;&nbsp;Powered By: <strong>Salesforce.com</strong></p>
+      <p>&nbsp;&copy; Wiregrass Cloud Technology 2015-18.&nbsp;&nbsp;Powered By: <strong>Salesforce.com</strong></p>
     </div>
   </div>
 
   <!-- Footer -->
   <div id="footer_container">
     <div id="footer">
-      &copy; Wiregrass Cloud Technology 2015-17. All rights reserved.
+      &copy; Wiregrass Cloud Technology 2014-2023. All rights reserved.
     </div>
   </div>
 </apex:page>

@@ -1,7 +1,7 @@
 /**
- *  Utility validate field class.
+ *  Utility Validate Field class.
  *
- *  Copyright (c) 2015-17 Wiregrass Cloud Technology 
+ *  Copyright (c) 2015-2023 Wiregrass Code Technology
  */
 global with sharing class UtilityValidateField {
 

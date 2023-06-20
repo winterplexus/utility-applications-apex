@@ -72,7 +72,7 @@
   <!-- Footer -->
   <div id="footer_container">
     <div id="footer">
-      &copy; Wiregrass Cloud Technology 2015-17. All rights reserved.
+      &copy; Wiregrass Cloud Technology 2014-2023. All rights reserved.
     </div>
   </div>
 </apex:page>

@@ -1,10 +1,10 @@
-Utility Applications for APEX
-=============================
+Utility Classes for APEX
+========================
 
-Utility applications based on Force.com technology and APEX programming language, VisualForce pages and standard HTML/CSS.
+Utility classes based on Force.com APEX programming language 
 
-The applications include the following:
+Utility classes include the following with supplemental VisualForce pages, APEX controller classes:
 
-1) Email APEX class and VisualForce page and controller.
+* Email APEX class and VisualForce page and APEX controller class
 
-2) Validate field APEX class and VisualForce page and controller.
+* Validate field APEX class and VisualForce page and APEX controller class
