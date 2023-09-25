@@ -1,6 +1,6 @@
-<apex:page id="UtilityValidateFieldTest" title="Utility: Validate Field Test" controller="UtilityValidateFieldTestController" showHeader="false" sidebar="false">
-  <apex:stylesheet value="{!URLFOR($Resource.wiregrass_resources, 'wiregrass.css')}"/>
-
+<apex:page id="UtilityEmailTest" title="Utility: Email Test" controller="UtilityEmailTestController" showHeader="false" sidebar="false">
+  <apex:stylesheet value="{!URLFOR($Resource.ccs_resources, 'code-construct-systems.css')}"/>
+   
   <!-- Header -->
   <div id="header_container">
     <div id="header">
@@ -17,124 +17,58 @@
       <!-- Page form -->
       <apex:form >
         <!-- User input block -->
-        <apex:pageBlock id="inputBlock" title="Utility: Validate Field Test">
+        <apex:pageBlock id="inputBlock" title="Utility: Email Test">
           <!-- User input grid -->
           <apex:panelGrid columns="2" id="inputGrid">
-            <!-- Input email -->
+
+            <!-- Input email address -->
             <apex:panelGroup id="inputEmailAddressLabelGroup">
-              <apex:outputLabel value="Email Address:" for="inputEmailAddressText"></apex:outputLabel>
+              <apex:outputLabel value="Addresses:" for="inputEmailAddressText"></apex:outputLabel>
             </apex:panelGroup>
             <apex:panelGroup id="inputEmailAddressGroup">
-              <apex:inputText value="{!emailAddress}" id="inputEmailAddressText" size="50" maxlength="50"/>
+              <apex:inputText value="{!emailAddress}" id="inputEmailAddressText" size="65" maxlength="50"/>&nbsp;
+              Separate multiple addresses using a semicolon character.
             </apex:panelGroup>
       
-            <!-- Output email validation result message -->
-            <apex:panelGroup id="outputEmailAddressValidLabelGroup">
-              <apex:outputLabel value="Email Address Validation Result:" for="outputEmailAddressValidText"></apex:outputLabel>
+            <!-- Input email subject -->
+            <apex:panelGroup id="inputEmailSubjectLabelGroup">
+              <apex:outputLabel value="Subject:" for="inputEmailSubjectText"></apex:outputLabel>
             </apex:panelGroup>
-            <apex:panelGroup id="outputEmailAddressValidGroup">
-              <apex:inputText value="{!emailAddressValid}" id="outputEmailAddressValidText" size="5" maxlength="5" disabled="true"/>
-            </apex:panelGroup>
-      
-            <!-- Input SSN -->
-            <apex:panelGroup id="ssnLabelGroup">
-              <apex:outputLabel value="SSN:" for="ssnText"></apex:outputLabel>
-            </apex:panelGroup>
-            <apex:panelGroup id="ssnGroup">
-              <apex:inputText value="{!ssn}" id="ssnText" size="11" maxlength="11"/>
-            </apex:panelGroup>
-      
-            <!-- Output SSN validation result message -->
-            <apex:panelGroup id="ssnValidLabelGroup">
-              <apex:outputLabel value="SSN Validation Result:" for="ssnValidText"></apex:outputLabel>
-            </apex:panelGroup>
-            <apex:panelGroup id="ssnValidGroup">
-              <apex:inputText value="{!ssnValid}" id="ssnValidText" size="5" maxlength="5" disabled="true"/>
-            </apex:panelGroup>
-      
-            <!-- Input state code -->
-            <apex:panelGroup id="stateCodeLabelGroup">
-              <apex:outputLabel value="State Code:" for="stateCodeText"></apex:outputLabel>
-            </apex:panelGroup>
-            <apex:panelGroup id="stateCodeGroup">
-              <apex:inputText value="{!stateCode}" id="stateCodeText" size="2" maxlength="2"/>
-            </apex:panelGroup>
-      
-            <!-- Output state code validation result message -->
-            <apex:panelGroup id="stateCodeValidLabelGroup">
-              <apex:outputLabel value="State Code Validation Result:" for="stateCodeValidText"></apex:outputLabel>
-            </apex:panelGroup>
-            <apex:panelGroup id="stateCodeValidGroup">
-              <apex:inputText value="{!stateCodeValid}" id="stateCodeValidText" size="5" maxlength="5" disabled="true"/>
-            </apex:panelGroup>
-      
-            <!-- Input telephone number -->
-            <apex:panelGroup id="telephoneNumberLabelGroup">
-              <apex:outputLabel value="Telephone Number:" for="telephoneNumberText"></apex:outputLabel>
-            </apex:panelGroup>
-            <apex:panelGroup id="telephoneNumberGroup">
-              <apex:inputText value="{!telephoneNumber}" id="telephoneNumberText" size="50" maxlength="50"/>
-            </apex:panelGroup>
-      
-            <!-- Output telephone number validation result message -->
-            <apex:panelGroup id="telephoneNumberValidLabelGroup">
-              <apex:outputLabel value="Telephone Number Validation Result:" for="telephoneNumberValidText"></apex:outputLabel>
-            </apex:panelGroup>
-            <apex:panelGroup id="telephoneNumberValidGroup">
-              <apex:inputText value="{!telephoneNumberValid}" id="telephoneNumberValidText" size="5" maxlength="5" disabled="true"/>
-            </apex:panelGroup>
-      
-            <!-- Input ZIP number -->
-            <apex:panelGroup id="zipCodeNumberLabelGroup">
-              <apex:outputLabel value="ZIP Number:" for="zipCodeNumberText"></apex:outputLabel>
-            </apex:panelGroup>
-            <apex:panelGroup id="zipCodeNumberGroup">
-              <apex:inputText value="{!zipCodeNumber}" id="zipCodeNumberText" size="10" maxlength="10"/>
-            </apex:panelGroup>
-      
-            <!-- Output ZIP number validation result message -->
-            <apex:panelGroup id="zipCodeNumberValidLabelGroup">
-              <apex:outputLabel value="ZIP Number Validation Result:" for="zipCodeNumberValidText"></apex:outputLabel>
-            </apex:panelGroup>
-            <apex:panelGroup id="zipCodeNumberValidGroup">
-              <apex:inputText value="{!zipCodeNumberValid}" id="zipCodeNumberValidText" size="5" maxlength="5" disabled="true"/>
+            <apex:panelGroup id="inputEmailSubjectGroup">
+              <apex:inputText value="{!emailSubject}" id="inputEmailSubjectText" size="65" maxlength="255"/>
             </apex:panelGroup>
 
-            <!-- Input numeric field -->
-            <apex:panelGroup id="numericFieldLabelGroup">
-              <apex:outputLabel value="Numeric Field:" for="numericFieldText"></apex:outputLabel>
+            <!-- Input email HTML body -->
+            <apex:panelGroup id="inputEmailHTMLBodyLabelGroup">
+              <apex:outputLabel value="HTML Body:" for="inputEmailHTMLBodyTextArea"></apex:outputLabel>
             </apex:panelGroup>
-            <apex:panelGroup id="numericFieldGroup">
-              <apex:inputText value="{!numericField}" id="numericFieldText" size="10" maxlength="10"/>
+            <apex:panelGroup id="inputEmailHTMLBodyGroup">
+              <apex:inputTextArea value="{!emailHTMLBody}" id="inputEmailHTMLBodyTextArea" cols="80" rows="5"/>
             </apex:panelGroup>
 
-            <!-- Output numeric field validation result message -->
-            <apex:panelGroup id="numericFieldValidLabelGroup">
-              <apex:outputLabel value="Numeric Field Validation Result:" for="numericFieldValidText"></apex:outputLabel>
+            <!-- Input email plain text body -->
+            <apex:panelGroup id="inputEmailPlainTextBodyLabelGroup">
+              <apex:outputLabel value="Plain Text Body:" for="inputEmailPlainTextBodyTextArea"></apex:outputLabel>
             </apex:panelGroup>
-            <apex:panelGroup id="numericFieldValidGroup">
-              <apex:inputText value="{!numericFieldValid}" id="numericFieldValidText" size="5" maxlength="5" disabled="true"/>
+            <apex:panelGroup id="inputEmailPlainTextBodyGroup">
+              <apex:inputTextArea value="{!emailPlainTextBody}" id="inputEmailPlainTextBodyTextArea" cols="80" rows="5"/>
             </apex:panelGroup>
           </apex:panelGrid><p />
 
           <!-- Action buttons -->
           <apex:panelGroup id="inputButtonsGroup">
             <apex:commandButton action="{!reset}" value="Reset" id="resetButton"/>&nbsp;
-            <apex:commandButton action="{!validate}" value="Validate" id="validateButton"/>
+            <apex:commandButton action="{!send}" value="Send" id="sendButton"/>
           </apex:panelGroup>
         </apex:pageBlock>
       </apex:form>
-      <br />
-      <br />
-      <apex:image id="logo" value="{!URLFOR($Resource.wiregrass_resources, 'wiregrass.png')}" height="60" width="200"/>
-      <p>&nbsp;&copy; Wiregrass Cloud Technology 2015-18.&nbsp;&nbsp;Powered By: <strong>Salesforce.com</strong></p>
     </div>
   </div>
 
   <!-- Footer -->
   <div id="footer_container">
     <div id="footer">
-      &copy; Wiregrass Cloud Technology 2014-2023. All rights reserved.
+      &copy; 2014-2024 Code Construct Systems. All rights reserved.
     </div>
   </div>
 </apex:page>

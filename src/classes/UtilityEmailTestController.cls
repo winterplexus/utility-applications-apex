@@ -1,7 +1,7 @@
 /**
- *  Utility Email Test controller.
+ *  Utility email test controller
  *
- *  Copyright (c) 2015-2023 Wiregrass Code Technology
+ *  Copyright (c) 2015-2024 Code Construct Systems
  */
 public with sharing class UtilityEmailTestController {
 

@@ -1,7 +1,7 @@
 /**
- *  Utility Validate Field Test controller.
+ *  Utility validate field test controller
  *
- *  Copyright (c) 2015-2023 Wiregrass Code Technology
+ *  Copyright (c) 2015-2024 Code Construct Systems
  */
 public with sharing class UtilityValidateFieldTestController {
 

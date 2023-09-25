@@ -1,7 +1,7 @@
 /**
- *  Utility Email class.
+ *  Utility email class
  *
- *  Copyright (c) 2015-2023 Wiregrass Code Technology
+ *  Copyright (c) 2015-2024 Code Construct Systems
  */
 global with sharing class UtilityEmail {
 
